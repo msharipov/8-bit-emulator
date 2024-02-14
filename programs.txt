@@ -1,0 +1,17 @@
+# Multiplies R1 by R0 and stores in R2
+
+GEN_REG[0].push(5)
+GEN_REG[1].push(5)
+RAM[50:68]=[0x2C, 1,        # DATA  R3, 1       50
+            0xEA,           # XOR   R2,R2       52
+            0x60,           # CLF               53
+            0x90,           # SHR   R0          54
+            0x58, 59,       # JC    59          55
+            0x40, 61,       # JUMP  61          57
+            0x60,           # CLF               59
+            0x86,           # ADD   R1,R2       60
+            0x60,           # CLF               61
+            0xA5,           # SHL   R1          62
+            0xAF,           # SHL   R3          63
+            0x58, 68,       # JC    58          64
+            0x40, 53]       # JUMP  53          66
