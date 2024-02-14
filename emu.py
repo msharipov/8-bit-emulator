@@ -355,6 +355,8 @@ def autoint(num):
             return int(num, 16)
         elif num[1] == 'b':
             return int(num, 2)
+        else:
+            return int(num)
     return int(num)
 
 
