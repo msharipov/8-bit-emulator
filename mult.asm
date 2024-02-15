@@ -1,5 +1,5 @@
-# Multiply R0 and R1 together and store result in R2
-# Load starting at 50
+; Multiply R0 and R1 together and store result in R2
+; Load starting at 50
 DATA  R3, 1
 XOR   R2, R2
 CLF              
